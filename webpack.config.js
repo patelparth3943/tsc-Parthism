@@ -7,6 +7,7 @@ module.exports = {
     path: path.resolve(__dirname, 'output'),
     filename: 'bundle.js',
   },
+  // mode: 'production',
   mode: 'development',
   module: {
     rules: [
@@ -19,6 +20,11 @@ module.exports = {
         test: /\.css$/,
         exclude: /node_modules/,
         use: ['style-loader', 'css-loader', 'postcss-loader'],
+      },
+      {
+        test: /\.svg$/,
+        exclude: /node_modules/,
+        use: ['@svgr/webpack'],
       },
     ],
   },
@@ -33,6 +39,6 @@ module.exports = {
   },
   devServer: {
     open: true,
-    port: 3000,
+    port: 8000,
   },
 };
