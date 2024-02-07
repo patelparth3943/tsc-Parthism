@@ -1,44 +1,44 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: './src/index.jsx',
+  entry: "./src/index.jsx",
   output: {
-    path: path.resolve(__dirname, 'output'),
-    filename: 'bundle.js',
+    path: path.resolve(__dirname, "output"),
+    filename: "bundle.js",
   },
   // mode: 'production',
-  mode: 'development',
+  mode: "development",
   module: {
     rules: [
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        use: 'babel-loader',
+        use: "babel-loader",
       },
       {
         test: /\.css$/,
         exclude: /node_modules/,
-        use: ['style-loader', 'css-loader', 'postcss-loader'],
+        use: ["style-loader", "css-loader", "postcss-loader"],
       },
       {
         test: /\.svg$/,
         exclude: /node_modules/,
-        use: ['@svgr/webpack'],
+        use: ["@svgr/webpack"],
       },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './public/index.html',
-      filename: 'index.html',
+      template: "./public/index.html",
+      filename: "index.html",
     }),
   ],
   resolve: {
-    extensions: ['.js', '.jsx', '.json'],
+    extensions: [".js", ".jsx", ".json"],
   },
   devServer: {
     open: true,
-    port: 8000,
+    port: 9000,
   },
 };
