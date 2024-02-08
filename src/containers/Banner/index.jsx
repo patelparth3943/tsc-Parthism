@@ -36,13 +36,13 @@ function Banner() {
       </div>
 
       {/* right side image */}
-      <div className="  w-1/2 max-h-[130vh] bg-[#d9f1e1] items-center flex max-sm:w-full max-lg:h-auto ">
+      <div className="relative w-1/2 max-h-[130vh] bg-[#d9f1e1] items-center flex max-sm:w-full max-lg:h-auto">
         <img
           className="w-[90%] right-40 max-md:right-0 mt-12 mb-10"
           src="https://template.hasthemes.com/brancy/brancy/assets/images/slider/slider1.webp"
           alt=""
         />
-        <div className="absolute flex gap-6 text-xl bottom-3 right-9 ">
+        <div className="absolute flex gap-6 text-xl bottom-3 right-9">
           <FaPinterest />
           <FaTwitter />
           <FaFacebookF />

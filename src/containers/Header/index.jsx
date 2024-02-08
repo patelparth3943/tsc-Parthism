@@ -5,33 +5,36 @@ import ShoppingBasketIcon from "../../../public/icons/shopping_basket.svg";
 
 function Header() {
   return (
-    <header className="flex gap-10  z-50 items-center px-container  fixed   py-5">
-      <a href="#">
-        <img
-          src="https://template.hasthemes.com/brancy/brancy/assets/images/logo.webp"
-          alt="logo"
-        />
-      </a>
+    <header className="fixed z-50 flex items-center justify-between w-full bg-white/30 backdrop-blur-sm">
+      <div className="flex justify-between gap-16 mx-3 my-2">
+        <a href="#" >
+          < img
+            src="https://template.hasthemes.com/brancy/brancy/assets/images/logo.webp"
+            alt="logo"
+
+          />
+        </a >
+      </div>
       <nav className="flex-1 ">
         <ul className="gap-10 hidden md:flex">
           <li>
-            <a href="#home">Home</a>
+            <a href="/">Home</a>
           </li>
           <li>
-            <a href="#about">About</a>
+            <a href="/about">About</a>
           </li>
           <li>
-            <a href="#shop">Shop</a>
+            <a href="/shop">Shop</a>
           </li>
           <li>
-            <a href="#pages">Pages</a>
+            <a href="/pages">Pages</a>
           </li>
           <li>
-            <a href="#blogs">Blogs</a>
+            <a href="/blogs">Blogs</a>
           </li>
         </ul>
       </nav>
-      <div className="flex gap-6 justify-end p-5 ">
+      <div className="flex gap-6  p-5 ">
         <button type="button">
           <PersonIcon height={40} width={40} />
         </button>
@@ -42,7 +45,7 @@ function Header() {
           <ShoppingBasketIcon height={40} width={40} />
         </button>
       </div>
-    </header>
+    </header >
   );
 }
 
